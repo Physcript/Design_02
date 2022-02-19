@@ -1,0 +1,147 @@
+:root {
+  --purple: #814096;
+  --pink: #f83292;
+  --gradient: linear-gradient(90deg, var(--purple), var(--pink) );
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+  text-decoration: none;
+  outline: none;
+  border: none;
+  list-style: none;
+}
+*::selection {
+  background: var(--pink);
+  color: #fff;
+}
+
+html {
+  font-size: 62.5%;
+  overflow: hidden;
+}
+
+body {
+  background: #f9f9f9;
+}
+
+header {
+  position: fixed;
+  padding: 2rem 9%;
+  top: 0; left: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  z-index: 1000;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+}
+header ul li {
+  padding: 0 10px;
+}
+header ul li a {
+  font-size: 1.5rem;
+  color: var(--purple);
+}
+header ul li a:hover {
+  color: var(--pink);
+  cursor: pointer;
+}
+
+
+header .logo {
+  font-size: 2rem;
+  color: var(--purple);
+}
+header .logo span {
+  color: var(--pink);
+}
+
+.menu-icon {
+  color: var(--purple);
+  display: none;
+}
+
+main {
+  min-height: 100vh;
+  padding: 0 9%;
+  padding-top: 7.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../img/home-bg-img.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.main .image img {
+  width: 40vw;
+  animation: float 3s linear infinite;
+}
+@keyframes float{
+  0%, 100%{
+    transform: translateY(0rem);
+  }
+  50%{
+    transform: translateY(-3.5rem);
+  }
+}
+.main .content h3 {
+  font-size: 5.5rem;
+  color: #333;
+  text-transform: uppercase;
+}
+.main .content h3 span {
+  color: var(--pink);  
+}
+.main .content p {
+  font-size: 1.7rem;
+  color: #666;
+  padding: 1rem 0;
+
+}
+.main .content .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: .8rem 3rem;
+  border-radius: 5rem;
+  background: var(--gradient);
+  font-size: 1.7rem;
+  color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  
+  header .menu-icon {
+    display: block;
+  }
+  .navbar {
+    display: none;
+  }
+  .show {
+    display: block;
+    width: 100%;
+    position:absolute;
+    top: 70px;
+    left: 0px;
+    padding: 0 9%;
+    background: #fff;
+    transform: 0.5s;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1) 
+
+  }
+  .navbar ul {
+    display: block;
+  }
+  .navbar ul li {
+    padding: 5px 0;
+  }
+
+}
